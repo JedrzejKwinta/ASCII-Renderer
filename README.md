@@ -6,7 +6,7 @@ Created for my C++ course, this project allows you to draw muliple figures on an
 # Usage
 ### Installation and execution
 1. Clone the repository: `git clone https://github.com/JedrzejKwinta/ASCII-Renderer`.
-2. Adjust the configuration file "cfg.txt" to your needs - see the [Configuration File](#Configuration-File) paragraph.
+2. Adjust the configuration file "cfg.txt" to your needs - see the [configuration file](#Configuration-File) paragraph.
 3. Execute the `make run` command in terminal in the repository folder.
 4. Use the `make clean` command to clean unused files.
 > [!WARNING]
@@ -15,7 +15,8 @@ Created for my C++ course, this project allows you to draw muliple figures on an
 # Configuration File
 ### Basic format of the file: 
 ```
-[output_file.txt] [canvas_size] [shape1_name] [shape1_size] [shape1_distinctive_point] [shape1_symbol] [shape2_name] [shape2_size] [shape2_distinctive_point] [shape2_symbol] ...
+[output_file.txt] [canvas_size] [shape1_name] [shape1_size] [shape1_distinctive_point] 
+[shape1_symbol] [shape2_name] [shape2_size] [shape2_distinctive_point] [shape2_symbol] ...
 ```
 ### Format of each part:
 1. Output file: choose the name you'd like to use - in an ASCII format, preferably ".txt".
