@@ -37,7 +37,7 @@ run: $(EXEC1)
 ###############################################################################
 .PHONY: clean tar
 clean:                                                     
-	rm -f *.o  *~ *.a *.so *.x core core* a.out; rm -rf ${LIB_DIR}
+	rm -f *.o  *~ *.a *.so *.x core core* a.out output.txt
 
 tar: clean
 	(cd ../; tar -cvzf $(DIR).tar.gz  $(DIR) )
