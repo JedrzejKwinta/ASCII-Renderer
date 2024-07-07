@@ -132,10 +132,14 @@ class Rectangle: public Figure
         ~Rectangle() { };
         void Draw(Canvas &s) override
         {
-            for(int x = P.x; x < P.x + len; x++)
+            for(int x = P.x+1; x < P.x + len+1; x++)
             {
-                for(int y = P.y; y < P.y + wid; y++)
+                for(int y = P.y+1; y < P.y + wid+1; y++)
                 {
+                    if(x >= s.width+1 || y >= s.length+1 || y <= 0 || x <= 0)
+                    {
+                        continue;
+                    }
                     s.painting[x][y] = sym;
                 }
             }
@@ -189,6 +193,7 @@ class Circle: public Figure
             {
                 for(int y = 1; y < s.length; y++)
                 {
+
                     int uno = x - P.x;
                     int dos = y - P.y;
                     //std::cout << pow(uno, 2) + pow(dos, 2) << " " << x << " " << y << " " << ((pow(uno, 2) + pow(dos, 2) <= pow(len, 2)) ? pow(len, 2) : 0) << std::endl;
@@ -284,7 +289,8 @@ int main(int argc, char* argv[])
                 break;
         }
     }
-    
+    std::cout << std::endl;
+    std::cout << "Following canvas will be saved to your output file - " << cfg[0] << ":" << std::endl;
     can1.FPrint(cfg[0]);
     can1.CPrint();
 }
